@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const backBtnDetector = document.getElementById("backButtonDetector");
   const qInput = document.getElementsByName("q")[0];
 
-  qInput.focus();
-  qInput.select();
-
   if (backBtnDetector.value === "1") {
     backBtnDetector.value = 0;
     qInput.value = qInput.value.replace(queryPostfix, "");
   }
+
+  qInput.focus();
+  qInput.select();
 
   document.querySelector("form").addEventListener("submit", (e) => {
     backBtnDetector.value = 1;
