@@ -1,9 +1,11 @@
 # lmgrfy
 
+### Node 20.11.0
+
 To install dependencies:
 
 ```bash
-bun install
+yarn install
 ```
 
 To run:
