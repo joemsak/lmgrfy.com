@@ -8,14 +8,12 @@ To install dependencies:
 yarn install
 ```
 
-To run:
+Development:
 
 ```bash
 live-server
 ```
 
-Development:
-
-```
+```bash
 npx tailwindcss -i ./src/index.css -o ./assets/index.css --watch
 ```
