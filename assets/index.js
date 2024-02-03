@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (backBtnDetector.value === "1") {
     backBtnDetector.value = 0;
-    console.log(qInput.value);
     qInput.value = qInput.value.replace(queryPostfix, "");
   }
 
