@@ -4,11 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const userInput = document.getElementById("userInput");
 
   qInput.value = "";
-
+  userInput.value = localStorage.getItem("userInputValue");
   userInput.focus();
   userInput.select();
 
   document.querySelector("form").addEventListener("submit", (e) => {
+    localStorage.setItem("userInputValue", userInput.value);
     e.target.q.value = `${userInput.value}${queryPostfix}`;
   });
 });
