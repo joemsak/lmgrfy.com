@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const queryPostfix = " site:reddit.com";
-  const userInput = document.getElementById("userInput");
   const qInput = document.getElementsByName("q")[0];
+  const userInput = document.getElementById("userInput");
 
   qInput.value = "";
 
-  userInput.value.replace(queryPostfix, "");
   userInput.focus();
   userInput.select();
 
