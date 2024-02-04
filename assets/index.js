@@ -1,15 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const queryPostfix = " site:reddit.com";
-  const qInput = document.getElementsByName("q")[0];
-  const userInput = document.getElementById("userInput");
+(() => {
+  const QUERY_POSTFIX = " site:reddit.com";
 
-  qInput.value = "";
-  userInput.value = localStorage.getItem("userInputValue");
-  userInput.focus();
-  userInput.select();
+  document.addEventListener("DOMContentLoaded", () => {
+    const qInputEl = document.getElementsByName("q")[0];
+    const userInputEl = document.getElementById("userInput");
 
-  document.querySelector("form").addEventListener("submit", (e) => {
-    localStorage.setItem("userInputValue", userInput.value);
-    e.target.q.value = `${userInput.value}${queryPostfix}`;
+    qInputEl.value = "";
+    userInputEl.focus();
+    userInputEl.select();
+
+    document.querySelector("form").addEventListener("submit", (e) => {
+      e.target.q.value = `${userInputEl.value}${QUERY_POSTFIX}`;
+    });
   });
-});
+})();
