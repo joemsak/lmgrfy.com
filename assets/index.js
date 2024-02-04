@@ -6,7 +6,6 @@
     const userInputEl = document.getElementById("userInput");
 
     qInputEl.value = "";
-    userInputEl.focus();
     userInputEl.select();
 
     document.querySelector("form").addEventListener("submit", (e) => {
